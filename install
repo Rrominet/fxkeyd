@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+cp -v ./fxkeyd /usr/local/bin/fxkeyd
+chmod +x /usr/local/bin/fxkeyd
+
+systemctl stop fxkeyd
+cp -v ./fxkeyd.service /etc/systemd/system/fxkeyd.service
+systemctl enable fxkeyd
+systemctl start fxkeyd
+
+echo "keyd installed and running."
