@@ -1,0 +1,9 @@
+[Unit]
+Description=key remapping daemon (fxkeyd)
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/fxkeyd
+
+[Install]
+WantedBy=multi-user.target
